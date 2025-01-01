@@ -5,12 +5,9 @@ SECTIONS
 {
   . = 0x80000000;
   .text.init : { *(.text.init) }
-  . = 0x80002000;
-  .tohost : { *(.tohost) }
-  . = ALIGN(0x1000);
-  .text : { *(.text) }
-  . = ALIGN(0x1000);
   .data : { *(.data) }
+  . = 0x80400000;
+  .tohost : { *(.tohost) }
   .bss : { *(.bss) }
   _end = .;
 }
